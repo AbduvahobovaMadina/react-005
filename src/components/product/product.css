@@ -1,0 +1,39 @@
+.productCard {
+    position: relative;
+    margin-top: 90px;
+    justify-content: space-between;
+    overflow: hidden;
+    height: 500px;
+    border-radius: 16px;
+    border: 1px solid #f0eeee;
+}
+.productCard:hover{
+      box-shadow: 1px 1px 7px #ddd;
+
+  }
+
+  .image__product{
+    transition: .3s;
+    cursor: pointer;
+  }
+  .image__product:hover{
+    transform: scale(1.05);
+  }
+  .text {
+    font-size: 24px;
+  }
+  .div__num {
+    position: absolute;
+    bottom: 0;
+    left: -50px;
+    transition: all ease 0.4s;
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+  }
+ 
+  .product__savat {
+    position: absolute;
+    bottom: 0;
+    right: -190px;
+  }
