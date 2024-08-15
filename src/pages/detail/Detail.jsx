@@ -63,7 +63,7 @@ const Detail = () => {
     <div className="wrapper">
         <div
       key={product.id}
-      className="productCard cursor-pointer h-96 mt-3 w-48  flex flex-col items-start justify-start shadow-md p-3"
+      className="productCard cursor-pointer  mt-3 w-60 h-96 flex flex-col items-start justify-start shadow-md p-3"
     >
       <div className="imge__product  ">
         <img className="w-full hover:scale-105 transition-all" src={product.images[0]} alt="" />
@@ -71,10 +71,9 @@ const Detail = () => {
       <p className="text-red-600 font-extrabold">12%</p>
       <b className="text-xl">{product.title}</b>
       <b className="  text-2xl">{product.price}$</b>
-      <del className=" text-start">7 763,23 Br</del>
       <div className="div__num flex items-center justify-center gap-2">
         <button
-          className=" w-4 h-4 p-2 pb-3 rounded-md border flex items-center justify-center"
+          className=" w-4 h-4 p-2 rounded-md border flex items-center justify-center"
           disabled={offsett <= 0}
           onClick={() => setoffsett(offsett - 1)}
         >
@@ -82,7 +81,7 @@ const Detail = () => {
         </button>
         <p className=" w-3 h-3  flex items-center justify-center">{offsett}</p>
         <button
-          className=" w-4 h-4 border p-2 pb-3 rounded-md flex items-center justify-center"
+          className=" w-4 h-4 border p-2 rounded-md flex items-center justify-center"
           onClick={() => setoffsett(offsett + 1)}
         >
           +
