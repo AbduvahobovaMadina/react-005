@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import savat from "../../assets/Group 95.png";
 import "./product.css"
+import { Link } from "react-router-dom";
 const API_URL = "https://dummyjson.com";
 
 const Product = () => {
@@ -59,29 +60,35 @@ const Product = () => {
         className="image__product w-56
       h-56 flex flex-col items-center m-auto "
       >
-        <img className="object-contain h-56" src={product.images[0]} alt="" />
+        <Link to={`/product/${product.id}`}>
+          <img className="object-contain h-56" src={product.images[0]} alt="" />
+        </Link>
       </div>
       <p className="text-red-600 font-extrabold">12%</p>
       <b className="text">{product.title}</b>
       <b className="text-2xl">{product.price}$</b>
-      <del className="text-start">7 763,23 Br</del>
+      <del className="text-start pb-6">7 763,23 Br</del>
       <div className="div__num mt-5 flex items-center justify-center gap-2">
-        <button
-          className=" w-3 h-3"
-          disabled={offset <= 1}
-          onClick={() => setoffset(offset - 1)}
+      <button
+          className=" w-4 h-4 p-2 pb-3 rounded-md border flex items-center justify-center"
+          disabled={product.count <= 0}
+          onClick={() => addToCartHandler(product.id, false)}
         >
           -
         </button>
-        <p className="w-3 h-3">{offset}</p>
-        <button className="w-3 h-3 " onClick={handleClick}>
+        <p className=" w-3 h-3  flex items-center justify-center">
+          {product.count}
+        </p>
+        <button
+          className=" w-4 h-4 border p-2 pb-3 rounded-md flex items-center justify-center"
+          onClick={() => addToCartHandler(product.id)}
+        >
           +
         </button>
-        <div className="product__savat">
+      </div>
+      <div className="product__savat">
         <img src={savat} alt="" />
       </div>
-      </div>
-      
     </div>
   ));
 

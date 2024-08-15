@@ -1,0 +1,23 @@
+@media (max-width: 625px) {
+    .katolog__nav {
+      form {
+        display: none;
+      }
+    }
+  }
+  @media (max-width: 625px) {
+    .katolog__nav {
+      form {
+        display: none;
+      }
+      p {
+        display: none;
+      }
+    }
+  }
+  @media (max-width:800px) {
+    .wrapper{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+  }
