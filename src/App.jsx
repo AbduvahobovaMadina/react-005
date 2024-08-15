@@ -17,7 +17,7 @@ function App() {
         <Route path="/" element={<Home/>} />
         <Route path="/katalog" element={<Каталог/>} />
         <Route path="/доставка" element={<Доставка/>} />
-        <Route path="/notFound" element={<NotFound/>} />
+        <Route path="/*" element={<NotFound/>} />
         <Route path="/call" element={<Call/>} />
       </Routes>
       <Footer/>
