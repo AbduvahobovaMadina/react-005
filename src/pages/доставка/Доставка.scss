@@ -1,0 +1,34 @@
+.Доставка {
+    margin-top: 20px;
+  }
+  .text {
+    font-size: 24px;
+  }
+  
+  @media (max-width: 625px) {
+    .katolog__nav {
+      form {
+        display: none;
+      }
+    }
+  }
+  @media (max-width: 625px) {
+    .katolog__nav {
+      form {
+        display: none;
+      }
+      p {
+        display: none;
+      }
+    }
+  }
+  @media (max-width: 725px) {
+    .discrp__wrap {
+      display: flex;
+      flex-direction: column;
+    }
+    .discrp__wrapp {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }

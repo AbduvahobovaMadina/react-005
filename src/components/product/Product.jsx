@@ -100,8 +100,8 @@ const Product = () => {
     </strong>
   ));
   const load = (
-    <div class="spinner">
-      <span class="loader"></span>
+    <div className="spinner">
+      <span className="loader"></span>
     </div>
   );
   return (
@@ -109,9 +109,9 @@ const Product = () => {
       <div className="flex gap-2 overflow-x-auto py-6 scroll-hide">
         {categoryItem}
       </div>
-      <div className="container flex items-center justify-center gap-5 flex-wrap">
-        {productItem}
+      <div className="container grid grid-cols-4  items-center justify-center gap-5 ">
         {loading && load}
+        {productItem}
       </div>
       {6 * offsetsy <= total ? (
         <button

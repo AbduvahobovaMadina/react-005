@@ -7,6 +7,13 @@
     border-radius: 16px;
     border: 1px solid #f0eeee;
 }
+.spinner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-left: 500px;
+}
 .loader {
   width: 48px;
   height: 48px;

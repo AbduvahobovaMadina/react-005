@@ -2,7 +2,7 @@ import React,{useState} from 'react'
 import "./header.css"
 import logo from "../../assets/logo.svg"
 import { RiMenu2Fill } from "react-icons/ri";
-
+import { Link } from "react-router-dom";
 
 function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,12 +17,23 @@ function Header() {
                 <nav className="navbar">
                     <img src={logo} alt="" />
                     <div className={`nav__collect ${isMenuOpen ? "show" : ""}`}>
-                        <ul className="nav__collection">
-                            <li>Каталог </li>
-                            <li>Доставка</li>
-                            <li>Условия</li>
-                            <li>Контакты</li>
-                        </ul>
+                      <ul className="nav__collection">
+                        <li>
+                          <Link to={"/"}> Home</Link>
+                        </li>
+                        <li>
+                          <Link to={"/katalog"}> Каталог</Link>
+                        </li>
+                        <li>
+                          <Link to={"/доставка"}>Доставка</Link>
+                        </li>
+                        <li>
+                          <a href="/notFound"> Условия </a>
+                        </li>
+                          <li>
+                            <Link to={"/call"}>Контакты</Link>
+                          </li>
+                      </ul>
                     </div>
                     <div className="number">
                         <h4>+ 375 736 463 64 72  /  + 375 736 463 64 72</h4>
