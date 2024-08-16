@@ -54,7 +54,7 @@ const Product = () => {
   const productItem = products?.map((product) => (
     <div
       key={product.id}
-      className="productCard pb-5 w-72  flex flex-col items-start justify-center p-3"
+      className="productCard pb-5 flex flex-col items-start justify-center p-3"
     >
       <div
         className="image__product w-56
@@ -116,7 +116,7 @@ const Product = () => {
       <div className="flex gap-2 overflow-x-auto py-6 scroll-hide">
         {categoryItem}
       </div>
-      <div className="container grid grid-cols-4  items-center justify-center gap-5 ">
+      <div className="container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  items-center justify-center gap-5 ">
         {loading && load}
         {productItem}
       </div>

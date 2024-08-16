@@ -37,7 +37,7 @@ const Каталог = () => {
       </div>
       <div className="cards flex flex-col gap-7 ">
         <b className="text">Каталог</b>
-        <div className="card_wrap grid grid-cols-4 gap-6 ">
+        <div className="card_wrap grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 ">
           <div className="card">
             <div>
               <img src={rasm1} alt="" />

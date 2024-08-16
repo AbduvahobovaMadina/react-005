@@ -32,8 +32,8 @@ const Доставка = () => {
         </div>
       </div>
       <b className="text">Доставка</b>
-      <div className=" discrp__wrapp grid grid-cols-2">
-        <div className="descr_text flex flex-col gap-7">
+      <div className=" discrp__wrapp flex flex-col md:flex-row md:justify-between items-center">
+        <div className="descr_text flex flex-col gap-7 w-full md:w-1/2">
           <p>Мы увозим товары из магазинов IKEA и привозим их в Ваш дом.</p>
           <p>
             Наше преимущество - фиксированная стоимость доставки по Беларуси.
@@ -57,15 +57,15 @@ const Доставка = () => {
           </p>
           <p>Даты поставки указаны в календаре на главной странице сайта. </p>
         </div>
-        <div className="img__descrp flex items-center">
+        <div className="img__descrp flex items-center w-full md:w-1/2">
           <img src={img1} alt="" />
         </div>
       </div>
-      <div className=" discrp__wrap grid grid-cols-2 ">
-        <div className="img__descrp flex items-center">
+      <div className=" discrp__wrapp flex flex-col-reverse md:flex-row md:justify-between items-center ">
+        <div className="img__descrp flex flex-col gap-7 w-full md:w-1/2">
           <img src={img2} alt="" />
         </div>
-        <div className="descr_text flex flex-col gap-5">
+        <div className="descr_text flex flex-col gap-5 w-full md:w-1/2">
           <b className="text">Доставка по Минску и Минскому р-ну</b>
           <p>
             Доставка по Минску осуществляется в течение 1-3 дней после поставки

@@ -17,7 +17,7 @@ function Header() {
                 <nav className="navbar">
                     <img src={logo} alt="" />
                     <div className={`nav__collect ${isMenuOpen ? "show" : ""}`}>
-                      <ul className="nav__collection">
+                      <ul className="hidden md:flex nav__collection">
                         <li>
                           <Link to={"/"}> Home</Link>
                         </li>

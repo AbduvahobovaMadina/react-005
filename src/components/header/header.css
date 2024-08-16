@@ -19,7 +19,7 @@
 }
 @media (max-width:990px) {
     .nav__collection{
-        display: none;
+        /* display: none; */
     }
     .number h4{
         display: none;

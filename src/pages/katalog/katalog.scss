@@ -7,31 +7,4 @@
   .text {
     font-size: 25px;
   }
-  @media (max-width: 750px) {
-    .card_wrap {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-  
-  @media (max-width: 500px) {
-    .card_wrap {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  @media (max-width: 625px) {
-    .katolog__nav {
-      form {
-        display: none;
-      }
-    }
-  }
-  @media (max-width: 625px) {
-    .katolog__nav {
-      form {
-        display: none;
-      }
-      p {
-        display: none;
-      }
-    }
-  }
+ 

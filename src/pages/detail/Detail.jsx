@@ -60,7 +60,7 @@ const Detail = () => {
   ));
   console.log(images);
   const productItem = products?.map((product) => (
-    <div className="wrapper">
+    <div className="wrapper" key={product.id}>
         <div
       key={product.id}
       className="productCard cursor-pointer  mt-3 w-60 h-96 flex flex-col items-start justify-start shadow-md p-3"
@@ -116,12 +116,12 @@ const Detail = () => {
       <div className="detail_wrap  mt-10">
         <p className="text-gray-500">Товары/Ванная/Платяные шкафы</p>
         <hr />
-        <div className="flex gap-11 mt-6">
-          <div className="w-1/2 flex flex-col items-center justify-center ">
+        <div className="flex gap-11 mt-6 md:flex-row flex-col">
+          <div className="md:w-1/2 w-full flex flex-col items-center justify-center ">
             <img src={data?.thumbnail} alt="" />
-            <div className="flex items-center justify-center">{images}</div>
+            <div className="flex items-center  justify-center">{images}</div>
           </div>
-          <div className="w-1/2 flex flex-col gap-4">
+          <div className="md:w-1/2 w-full flex flex-col gap-4">
             <b className="text-2xl">{data?.title}</b>
             <div className="flex items-center">
               <b className="text-xl">Арт. 890.321.44 / </b>
@@ -176,7 +176,7 @@ const Detail = () => {
       </div>
       <div className="cards w-full  mt-9 justify-center items-center">
         <b>С этим товаром также заказывают</b>
-        <div className="card_wrap mt-8 flex items-center justify-center gap-3">
+        <div className="card_wrap mt-8 sm:grid flex justify-center flex-wrap sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {productItem}
         </div>
       </div>
