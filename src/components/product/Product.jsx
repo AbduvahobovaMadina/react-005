@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,memo } from "react";
 // import axios from "axios";
 import axios from "../../api";
 import savat from "../../assets/Group 95.png";
@@ -95,4 +95,4 @@ const Product = () => {
   );
 };
 
-export default Product;
+export default memo (Product);

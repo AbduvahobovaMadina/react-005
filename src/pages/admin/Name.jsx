@@ -1,4 +1,4 @@
-import React from "react";
+import React, {memo} from "react";
 import { FaRegUserCircle } from "react-icons/fa";
 
 const Name = () => {
@@ -12,4 +12,4 @@ const Name = () => {
     );
   };
   
-  export default Name;
+  export default memo (Name);

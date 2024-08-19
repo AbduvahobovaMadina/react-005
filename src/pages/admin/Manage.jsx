@@ -1,4 +1,4 @@
-import React from "react";
+import React, {memo} from "react";
 import { SlUserFemale } from "react-icons/sl";
 
 const Manage = () => {
@@ -17,4 +17,4 @@ const Manage = () => {
   );
 };
 
-export default Manage;
+export default memo (Manage);

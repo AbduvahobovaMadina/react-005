@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{useState, memo} from 'react'
 import "./header.css"
 import logo from "../../assets/logo.svg"
 import { RiMenu2Fill } from "react-icons/ri";
@@ -52,4 +52,4 @@ function Header() {
   )
 }
 
-export default Header
+export default memo (Header)

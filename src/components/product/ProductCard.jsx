@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {memo} from 'react'
 import { Link } from 'react-router-dom';
 import savat from "../../assets/Group 95.png"
 const ProductCard=({products}) => {
@@ -51,4 +51,4 @@ const ProductCard=({products}) => {
   )
 }
 
-export default ProductCard
+export default memo (ProductCard);

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {memo} from "react";
 import { NavLink, Outlet } from "react-router-dom";
 
 const Admin = () => {
@@ -18,4 +18,4 @@ const Admin = () => {
   );
 };
 
-export default Admin;
+export default memo (Admin);

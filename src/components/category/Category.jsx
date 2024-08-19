@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{memo} from 'react'
 import "./category.css"
 
 import img1 from "../../assets/klipartz 1.png";
@@ -80,4 +80,4 @@ const Category = () => {
   );
 };
 
-export default Category;
+export default memo (Category);
