@@ -1,4 +1,5 @@
-import axios from "axios";
+// import axios from "axios";
+import axios from "../../api";
 import { CiSearch } from "react-icons/ci";
 import { CiMenuFries } from "react-icons/ci";
 import "../../components/product/product.css";
@@ -11,7 +12,7 @@ import img1 from "../../assets/Group 188.png";
 import img2 from "../../assets/Frame 3.png";
 import React, { useEffect, useState } from "react";
 import { useLocation, useParams } from "react-router-dom";
-const API_URL = "https://dummyjson.com";
+import ProductCard from "../../components/product/ProductCard";
 
 const Detail = () => {
   //   const location = useLocation();
@@ -21,26 +22,31 @@ const Detail = () => {
   const [products, setproduct] = useState(null);
   const [offset, setoffset] = useState(0);
   const [offsett, setoffsett] = useState(0);
-
   const [total, settottal] = useState(0);
   const [offsetsy, setoffsetsy] = useState(1);
   const [sellect, setSellect] = useState("");
   const handleClick = () => setoffset(offset + 1);
   const onhandleClick = () => setoffsett(offsett + 1);
   console.log(id);
-  //   useEffect(() => {
-  //     window.scrollTo(0, 0);
-  //   });
+ useEffect(() =>{
+  window.scrollTo(0, 0)
+ } , [id])
   useEffect(() => {
     axios
-      .get(`${API_URL}/product/${id}`)
+      .get(`/products/${id}`)
+      .then((res) => setData(res.data))
+      .catch((err) => console.log(err));
+  }, [id]);
+  useEffect(() => {
+    axios
+      .get(`/products/category/${data?.category}`, {params: {limit: 4}})
       .then((res) => setData(res.data))
       .catch((err) => console.log(err));
   }, []);
   console.log(data);
   useEffect(() => {
     axios
-      .get(`${API_URL}/products${sellect}`, {
+      .get(`/products${sellect}`, {
         params: {
           limit: 4,
         },
@@ -59,6 +65,8 @@ const Detail = () => {
     </div>
   ));
   console.log(images);
+  console.log(data);
+  
   const productItem = products?.map((product) => (
     <div className="wrapper" key={product.id}>
         <div
@@ -180,6 +188,7 @@ const Detail = () => {
           {productItem}
         </div>
       </div>
+      <ProductCard products={products}/>
     </div>
   );
 };
