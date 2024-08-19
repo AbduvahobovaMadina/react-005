@@ -1,4 +1,4 @@
-import React from "react";
+import React, {memo} from "react";
 import Hero from "../../components/hero/Hero";
 import Category from "../../components/category/Category";
 import Product from "../../components/product/Product";
@@ -13,4 +13,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default memo (Home);

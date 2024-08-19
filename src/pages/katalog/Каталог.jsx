@@ -1,4 +1,4 @@
-import React from "react";
+import React, {memo} from "react";
 import { CiSearch } from "react-icons/ci";
 import { CiMenuFries } from "react-icons/ci";
 import { IoStarOutline } from "react-icons/io5";
@@ -154,4 +154,4 @@ const Каталог = () => {
   );
 };
 
-export default Каталог;
+export default memo (Каталог);

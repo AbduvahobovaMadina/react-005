@@ -10,7 +10,7 @@ import { VscAccount } from "react-icons/vsc";
 import "./Detail.scss";
 import img1 from "../../assets/Group 188.png";
 import img2 from "../../assets/Frame 3.png";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, memo } from "react";
 import { useLocation, useParams } from "react-router-dom";
 import ProductCard from "../../components/product/ProductCard";
 
@@ -137,4 +137,4 @@ const Detail = () => {
   );
 };
 
-export default Detail;
+export default memo (Detail);
